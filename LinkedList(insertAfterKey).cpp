@@ -24,12 +24,12 @@ if(head==NULL){//if the head is epmty
 }
 node *cur=head;//cur points to the first node; Cur start traversing the list from the head.;
 while(cur and cur->data!=key){// Searching for key
-cur=cur->next;// cur is updated to points to the next node{connection fullfilled without insert Tail in normal case} "50->NULL endl 50->NULL"
+cur=cur->next;// cur is updated to points to the next node
 }
 if(cur==NULL)return;//key not found;Special case
 //creat a node on the heap
  node /*must(*) to declare pointer */ *newnode/* assets are data & address{NULL}*/=new/*malloc*/ node(val);//constractor call....block-1
-newnode->next=cur->next;//newnode becomes cur->next{when cur->next==NULL,then insert the Tail};Link the last node to the new node."50->NULL endl 50->40->30->20->10->NULL
+newnode->next=cur->next;//newnode becomes cur->next{when cur->next==NULL,then insert the Tail};Link the last node to the new node.
 cur->next=newnode;
 }
 
